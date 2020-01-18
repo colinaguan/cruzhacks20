@@ -42,20 +42,19 @@ class App extends Component {
     }
 
     return (
-      <div className="container">
+      <div>
         <Router>
-          <div>
-            {navBar}
-            <Switch>
-              <Route exact path='/' render={(props) => <Start handleFinishStart={this.handleFinishStart} />}></Route>
-              <Route exact path='/getstarted' render={(props) => <GetStarted handleFinishStart={this.handleFinishStart} />}></Route>
-              <Route exact path='/home' render={(props) => <Home />}></Route>
-              <Route exact path='/explore' render={(props) => <Explore />}></Route>
-              <Route exact path='/elections' render={(props) => <Elections />}></Route>
-              <Route exact path='/feed' render={(props) => <Feed />}></Route>
-              <Route exact path='/profile' render={(props) => <Profile />}></Route>
-            </Switch>
-          </div>
+          {navBar}
+          {/* <BaseNav /> */}
+          <Switch>
+            <Route exact path='/' render={(props) => <Start handleFinishStart={this.handleFinishStart} />}></Route>
+            <Route exact path='/getstarted' render={(props) => <GetStarted handleFinishStart={this.handleFinishStart} />}></Route>
+            <Route exact path='/home' render={(props) => <Home />}></Route>
+            <Route exact path='/explore' render={(props) => <Explore />}></Route>
+            <Route exact path='/elections' render={(props) => <Elections />}></Route>
+            <Route exact path='/feed' render={(props) => <Feed />}></Route>
+            <Route exact path='/profile' render={(props) => <Profile />}></Route>
+          </Switch>
         </Router>
       </div>
     );
