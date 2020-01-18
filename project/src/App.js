@@ -21,42 +21,24 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props);
-
-    this.handleFinishStart = this.handleFinishStart.bind(this);
-
-    this.state = {
-      get_started: true
-    };
-  }
-
-  handleFinishStart() {
-    console.log("handle finish start called");
-    this.setState({ get_started: false });
   }
 
   render() {
 
-    let navBar;
-    if (!this.state.get_started) {
-      navBar = (<BaseNav />);
-    }
-
     return (
       <div>
         <Router>
-          {navBar}
-          {/* <BaseNav /> */}
           <Switch>
-            <Route exact path='/' render={(props) => <Start handleFinishStart={this.handleFinishStart} />}></Route>
-            <Route exact path='/getstarted' render={(props) => <GetStarted handleFinishStart={this.handleFinishStart} />}></Route>
-            <Route exact path='/home' render={(props) => <Home />}></Route>
+            <Route exact path='/:page_id' render={(props) => <BaseNav />} ></Route>
+            <Route exact path='/' render={(props) => <GetStarted />}></Route>
+            {/* <Route exact path='/home' render={(props) => <Home />}></Route>
             <Route exact path='/explore' render={(props) => <Explore />}></Route>
             <Route exact path='/elections' render={(props) => <Elections />}></Route>
             <Route exact path='/feed' render={(props) => <Feed />}></Route>
-            <Route exact path='/profile' render={(props) => <Profile />}></Route>
+            <Route exact path='/profile' render={(props) => <Profile />}></Route> */}
           </Switch>
         </Router>
-      </div>
+      </div >
     );
   }
 }
