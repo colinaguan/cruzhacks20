@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class DashMain extends Component {
+class Explore extends Component {
+
+
     render() {
         return (
-            <h2>DashMain</h2>
+            <h2>Explore</h2>
         );
     }
 }
 
-export default DashMain;
+export default Explore;
