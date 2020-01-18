@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class ElectMain extends Component {
+class Feed extends Component {
 
     render() {
         return (
-            <h2>ElectMain</h2>
+            <div>
+                <h2>Feed</h2>
+            </div>
         );
     }
 }
 
-export default ElectMain;
+export default Feed;
