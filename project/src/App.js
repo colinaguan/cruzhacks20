@@ -6,6 +6,7 @@ import {
   Link
 } from "react-router-dom";
 
+import Start from './components/Start'
 import GetStarted from './components/GetStarted'
 import BaseNav from './components/BaseNav'
 import Home from './components/Home'
@@ -29,6 +30,7 @@ class App extends Component {
   }
 
   handleFinishStart() {
+    console.log("handle finish start called");
     this.setState({ get_started: false });
   }
 
@@ -45,8 +47,9 @@ class App extends Component {
           <div>
             {navBar}
             <Switch>
+              <Route exact path='/' render={(props) => <Start handleFinishStart={this.handleFinishStart} />}></Route>
               <Route exact path='/getstarted' render={(props) => <GetStarted handleFinishStart={this.handleFinishStart} />}></Route>
-              <Route exact path='/' render={(props) => <Home />}></Route>
+              <Route exact path='/home' render={(props) => <Home />}></Route>
               <Route exact path='/explore' render={(props) => <Explore />}></Route>
               <Route exact path='/elections' render={(props) => <Elections />}></Route>
               <Route exact path='/feed' render={(props) => <Feed />}></Route>

@@ -11,8 +11,8 @@ class GetStarted extends Component {
         return (
             <div>
                 <h2>Get Started</h2>
-                <Link to={"/"}>
-                    <button type="button" className="btn btn-light" onClick={this.props.handleFinishStart}>Light</button>
+                <Link to={"/home"}>
+                    <button type="button" className="btn btn-light" onClick={this.props.handleFinishStart}>Home</button>
                 </Link>
             </div>
         );

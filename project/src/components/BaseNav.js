@@ -17,7 +17,7 @@ class BaseNav extends Component {
         return (
             <div>
                 <nav className="navbar navbar-light bg-light">
-                    <Link to="/" className="navbar-link">Home</Link>
+                    <Link to="/home" className="navbar-link">Home</Link>
                     <Link to="/explore" className="navbar-link">Explore</Link>
                     <Link to="/elections" className="navbar-link">Elections</Link>
                     <Link to="/feed" className="navbar-link">Your Feed</Link>
